@@ -3,6 +3,9 @@ package codeclan.com.wordcounter;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -26,4 +29,28 @@ public class WordCounterTest {
         int answer = wordCounter.getWordCount(words1);
         assertEquals(36, answer);
     }
+
+    @Test
+    public void canGetWordsCount(){
+        HashMap<String, Integer> answer = wordCounter.getWordsCount(words1);
+        System.out.println(answer);
+    }
+
+    @Test
+    public void canGetWordsCountSorted(){
+        ArrayList<String[]> answer = wordCounter.getWordCountSorted(words1);
+        for (String[] array : answer) {
+            String word = array[0];
+            String count =  array[1];
+            System.out.println("" + word + ": " + count);
+        }
+
+    }
+
+    @Test
+    public void canGetPrettyWordsCountSorted(){
+        String answer = wordCounter.getPrettyWordsCountSorted(words1);
+        System.out.println(answer);
+    }
+
 }

@@ -10,7 +10,7 @@
         android:id="@+id/display_answer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/display_answer"
+        android:text="Word Count Total"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -43,5 +43,17 @@
         app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input_text" />
+
+    <TextView
+        android:id="@+id/wordsCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:text="Word Count per word   "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/display_answer" />
 
 </android.support.constraint.ConstraintLayout>

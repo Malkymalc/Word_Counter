@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText questionEditText;
     private Button wordcount_button;
     private TextView answerTextView;
+    private TextView wordsCount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         questionEditText = findViewById(R.id.input_text);
         wordcount_button = findViewById(R.id.wordcount_button);
         answerTextView = findViewById(R.id.display_answer);
+        wordsCount = findViewById(R.id.wordsCount);
     }
 
     public void onAnswerButtonClicked(View clickedView) {
@@ -32,5 +34,8 @@ public class MainActivity extends AppCompatActivity {
         WordCounter wordCounter = new WordCounter();
         String answer = "The answer: " + wordCounter.getWordCount(inputText);
         answerTextView.setText(answer);
+
+        String answer2 = "" + wordCounter.getPrettyWordsCountSorted(answer) + "";
+        wordsCount.setText(answer2);
     }
 }
