@@ -61,13 +61,13 @@ public class WordCounter {
     public String getPrettyWordsCountSorted(String words) {
         ArrayList<String[]> answer = getWordCountSorted(words);
         Integer rank = 0;
-        String prettyAnswer = "| Rank |    Word      |   Count   | \n";
+        String prettyAnswer = "| Rank |  Word    | Count | \n ====================== \n";
         for (String[] array : answer) {
             rank++;
             String rank1 = String.valueOf(rank);
             String word = array[0];
             String count = array[1];
-            String pretty = "|  " + rank1 + "  |  " + word + "       |  " + count + "| \n";
+            String pretty = "|     " + rank1 + "   |   \"" + word + "\"    |   " + count + "     | \n";
             prettyAnswer = prettyAnswer.concat(pretty);
         }
         return prettyAnswer;

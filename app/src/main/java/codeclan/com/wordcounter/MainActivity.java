@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         String answer = "The answer: " + wordCounter.getWordCount(inputText);
         answerTextView.setText(answer);
 
-        String answer2 = "" + wordCounter.getPrettyWordsCountSorted(answer) + "";
+        String answer2 = "" + wordCounter.getPrettyWordsCountSorted(inputText) + "";
         wordsCount.setText(answer2);
     }
 }
